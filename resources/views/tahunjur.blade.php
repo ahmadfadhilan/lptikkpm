@@ -1,5 +1,5 @@
 
-            <div class="card mb-3">
+            <div class="card mb-3" hidden="true">
                 <div class="card-header">
                   <div class="row">
                     <div class="col" align="left">
@@ -17,7 +17,7 @@
                         </div>
                     @endif
 
-                    {!! Form::open(['url' => 'tahunjur','class' => 'ajax']) !!}
+                    {!! Form::open(['url' => 'tahunjur','class' => 'tahunjur']) !!}
                     <div class="row">
                       <div class="col form-group">
                           {!! Form::selectYear('year', 2008, 2017,null,['class' => 'form-control','placeholder'=>'Pilih Tahun ...']) !!}

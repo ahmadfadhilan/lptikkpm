@@ -36,3 +36,5 @@ Route::post('tahunjurft', 'FTController@tahunjur');
 Route::post('jaluruktft', 'FTController@jalurukt');
 Route::get('excelft','FTController@tjexport')->name('tahunjurft.excel');
 Route::get('excel1ft','FTController@juexport')->name('jaluruktft.excel');
+
+Route::get('api/coba','MhsController@api')->name('api.coba');

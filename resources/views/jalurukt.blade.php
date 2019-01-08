@@ -1,5 +1,5 @@
 
-            <div class="card">
+            <div class="card" hidden="true">
                 <div class="card-header" align="right">
                   <div class="row">
                     <div class="col" align="left">
@@ -17,7 +17,7 @@
                         </div>
                     @endif
 
-                    {!! Form::open(['url' => 'jalurukt','class' => 'ajax']) !!}
+                    {!! Form::open(['url' => 'jalurukt','class' => 'jalurukt']) !!}
                     <div class="row">
                       <div class="col form-group">
                           {!! Form::select('jlrmsk',$jalur,null,['class' => 'form-control','placeholder'=>'Pilih Jalur Masuk ...'])!!}
@@ -32,14 +32,19 @@
                       if(isset($_POST['jlrmsk'])){
                     ?>
 
-                    <table class="table">
-                      <tr>
-                          <th>NIM</th>
-                          <th>Nama</th>
-                          <th>Jurusan</th>
-                          <th>Jalur Masuk</th>
-                          <th>Jumlah Tarif</th>
-                      </tr>
+                    <table class="table" id="table_mhs">
+                      <thead>
+                        <tr>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Jurusan</th>
+                            <th>Jalur Masuk</th>
+                            <th>Jumlah Tarif</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                      </tbody>
                       @foreach($query1 as $query)
                       <tr>
                           <td>{{$query ->mhsNiu}}</td>
