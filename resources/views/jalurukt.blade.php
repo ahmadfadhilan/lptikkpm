@@ -1,5 +1,5 @@
 
-            <div class="card" hidden="true">
+            <div class="card">
                 <div class="card-header" align="right">
                   <div class="row">
                     <div class="col" align="left">

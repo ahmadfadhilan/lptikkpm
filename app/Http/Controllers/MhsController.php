@@ -67,26 +67,31 @@ class MhsController extends Controller
 
       }
 
-      public static function jurusan()
+      public function query()
       {
-        return DB::connection('15')
+        return DB::connection('15');
+      }
+
+      public function jurusan()
+      {
+        return MhsController::query()
         ->table('program_studi')
         ->select('prodiKode','prodiNamaResmi')
         ->where('prodiFakKode','=','15')
         ->pluck('prodiNamaResmi','prodiKode');
       }
 
-      public static function fakultas()
+      public function fakultas()
       {
-        return DB::connection('15')
+        return MhsController::query()
         ->table('fakultas')
         ->select('fakKode','fakNamaResmi')
         ->pluck('fakNamaResmi','fakKode');
       }
 
-      public static function jalur()
+      public function jalur()
       {
-        return DB::connection('15')
+        return MhsController::query()
         ->table('s_jalur_ref')
         ->pluck('jllrNama', 'jllrKode');
       }

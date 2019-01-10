@@ -7,11 +7,7 @@
         <div class="col-md-12">
 
           Halaman Ini Salah
-          {!! Form::open(['url' => 'fakultas','class' => 'ajax']) !!}
-            <div class="col-md-6 form-group">
-                {!! Form::select('fakKode',$fakultas,null,['class' => 'form-control','placeholder'=>'Pilih Fakultas ...'])!!}
-            </div>
-          {!! Form::close() !!}
+          
 
             @include('tahunjur')
 
